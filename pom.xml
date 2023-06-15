@@ -11,9 +11,10 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <powsybl-dependencies.version>2023.0.0-SNAPSHOT</powsybl-dependencies.version>
-        <powsybl-core.version>5.2.0-SNAPSHOT</powsybl-core.version>
-        <powsybl-dynawo.version>1.12.0-SNAPSHOT</powsybl-dynawo.version>
+        <powsybl-dependencies.version>2023.3.0-SNAPSHOT</powsybl-dependencies.version>
+        <powsybl-core.version>5.4.0-SNAPSHOT</powsybl-core.version>
+        <powsybl-rte-core.version>3.15.0-SNAPSHOT</powsybl-rte-core.version>
+        <powsybl-dynawo.version>1.15.0-SNAPSHOT</powsybl-dynawo.version>
     </properties>
 
     <dependencyManagement>
@@ -105,6 +106,20 @@
             <groupId>com.powsybl</groupId>
             <artifactId>powsybl-security-analysis-api</artifactId>
             <version>${powsybl-core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.rte-france.powsybl</groupId>
+            <artifactId>powsybl-dynawaltz-rte</artifactId>
+            <version>${powsybl-rte-core.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.rte-france.powsybl</groupId>
+            <artifactId>powsybl-dynawaltz-dsl-rte</artifactId>
+            <version>${powsybl-rte-core.version}</version>
+            <scope>runtime</scope>
         </dependency>
 
     </dependencies>
